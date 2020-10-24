@@ -20,7 +20,8 @@ logger();
 logger();
 logger(); */
 
-/* function fruitProcessor(noOfApples, noOfOranges) {
+/*
+function fruitProcessor(noOfApples, noOfOranges) {
     const juice = `Juice with ${noOfApples} apples and ${noOfOranges} oranges`;
     return juice;
 }
@@ -61,7 +62,7 @@ console.log(age1, age2); */
 ===================
 */
 
-// Arrow function
+/* // Arrow function
 const calcAge3 = birthYear => new Date().getFullYear() - birthYear;
 const age3 = calcAge3(1991);
 console.log(age3);
@@ -71,5 +72,25 @@ const yearsUntilRetirement = (birthYear, fisrtName) => {
    const retirement = 65 - age;
    // return retirement;
    return `${fisrtName} retires in ${retirement} years`
+} */
+
+
+/*
+====================================
+--Functions calling other fucntions-
+====================================
+*/
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
 }
 
+function fruitProcessor(noOfApples, noOfOranges) {
+    const applePieces = cutFruitPieces(noOfApples);
+    const orangePices = cutFruitPieces(noOfOranges);
+    const juice = `Juice with ${applePieces} apples and ${orangePices} oranges`;
+    return juice;
+}
+
+const myJuice = fruitProcessor(2, 3);
+console.log(myJuice);
