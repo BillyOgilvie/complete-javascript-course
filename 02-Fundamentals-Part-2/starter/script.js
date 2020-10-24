@@ -20,7 +20,7 @@ logger();
 logger();
 logger(); */
 
-function fruitProcessor(noOfApples, noOfOranges) {
+/* function fruitProcessor(noOfApples, noOfOranges) {
     const juice = `Juice with ${noOfApples} apples and ${noOfOranges} oranges`;
     return juice;
 }
@@ -29,4 +29,35 @@ const appleJuice = fruitProcessor(5,0);
 console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(5,2);
-console.log(appleOrangeJuice);
+console.log(appleOrangeJuice); */
+
+
+/*
+================================================
+-Functions declerations vs function expressions-
+================================================
+*/
+
+/* const age1 = calcAge1(1989);
+// function decleration - Hoisted: can be called before it is defined
+function calcAge1(birthYear) {
+    const year = new Date().getFullYear();
+    return year - birthYear;
+}
+
+// function expression - Not hoisted
+const calcAge2 = function (birthYear) {
+    const year = new Date().getFullYear();
+    return year - birthYear;
+}
+
+const age2 = calcAge2(1984);
+console.log(age1, age2); */
+
+
+/*
+===================
+--Arrow Functions--
+===================
+*/
+
