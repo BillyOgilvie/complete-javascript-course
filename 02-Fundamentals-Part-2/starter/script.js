@@ -256,3 +256,33 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 
 GOOD LUCK 😀
 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const calculateTip = bill => {
+  let percentage;
+  if (bill < 50) {
+    percentage = 0.2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = 0.15;
+  } else if (bill >= 200) {
+    percentage = 0.1;
+  } else {
+    return 'I hit an error';
+  }
+  return percentage * bill;
+};
+
+const tips = bills.map(cur => calculateTip(cur));
+
+let totals = [];
+for (let i = 0; i < bills.length; i++) {
+  totals[i] = bills[i] + tips[i];
+}
+
+const avgTip = tips.reduce((cur, prev) => cur + prev) / tips.length;
+
+console.log(tips);
+console.log(bills);
+console.log(totals);
+console.log(avgTip);
